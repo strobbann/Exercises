@@ -4,15 +4,22 @@ public class Uppgift4 {
 		Scanner in = new Scanner(System.in);
 		String wantToContiue = "";
 		do{
-		System.out.println("ange två tal : ");
-		int firstNumber = randomNumber();
-		int secondNumber = randomNumber();
-		char symbol = randomSymbol(new char[]{'+', '-', '/', '*'});
-		whatToCalculate(firstNumber,secondNumber,in,symbol);
-		in.nextLine();
-		System.out.print("vill du fortsätta: ");
-		wantToContiue = in.nextLine();
-		}while(!wantToContiue.equals("NEJ"));
+			boolean isValidInput = false;
+			int firstNumber = randomNumber();
+			int secondNumber = randomNumber();
+			char symbol = randomSymbol(new char[]{'+', '-', '/', '*'});
+			whatToCalculate(firstNumber,secondNumber,in,symbol);
+			in.nextLine();
+			while(!isValidInput){
+				System.out.print("vill du fortsätta: ");
+				wantToContiue = in.nextLine();
+				if(wantToContiue.equalsIgnoreCase("ja") || wantToContiue.equalsIgnoreCase("nej")) {
+					isValidInput = true;
+				} else {
+					System.out.println("Felatktig input");
+				}
+			}
+		}while(!wantToContiue.equalsIgnoreCase("nej"));
 	}
 	
 	public static void addtion(int firstNumber, int secondNumber, Scanner in){
@@ -61,7 +68,6 @@ public class Uppgift4 {
 	
 	public static void whatToCalculate(int firstNumber, int secondNumber, Scanner in,char symbol){
 		switch(symbol){
-			
 			case '+' : {
 				addtion(firstNumber, secondNumber,in);
 				break;
