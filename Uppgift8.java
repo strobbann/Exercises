@@ -1,8 +1,9 @@
 import java.util.Scanner;
 public class Uppgift8 {
+	private static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
+		
 		Uppgift8 uppgift = new Uppgift8();
 		int[] numbers = new int[20];
 		for (int i = 0; i < numbers.length ; i ++) {
@@ -42,6 +43,12 @@ public class Uppgift8 {
 	}
 
 	public void zeroBetween(int start, int end, int[] numbers) {
+		if(end < start) {
+			int tempEnd = end;
+			int tempStart = start;
+			start = tempEnd;
+			end = tempStart;
+		}
 		for(int i = 0; i < numbers.length ; i++) {
 			if(numbers[i] >= start && numbers[i] <= end){
 				numbers[i] = 0;
@@ -52,17 +59,22 @@ public class Uppgift8 {
 	public void setZeroesLast(int[] numbers) {
 		int lastIndex = numbers.length-1;
 		int length = numbers.length;
-		for(int i = 0; i < length; i++) {
-
-			if(numbers[i] == 0) {
+		int zeroes = 0;
+		int freeIndex = -1;
+		for(int i = numbers.length-1; 0 < i ;i-- ){
+			if(numbers[i] != 0 & freeIndex == -1) {
+				freeIndex = i;
+			}
+			else if(numbers[i] == 0 & freeIndex != -1) {
+				int freeNumber = numbers[freeIndex];
 				int numberZero = numbers[i];
-				int numberLast = numbers[lastIndex];
-				numbers[lastIndex] = numberZero;
-				numbers[i] = numberLast;
-				lastIndex--;
-				length--;
+				numbers[freeIndex] = numberZero;
+				numbers[i] = freeNumber;
+				freeIndex = -1;
+				i = numbers.length-1;
 			}
 		}
+			
 	}
 
 	public void printArray(int[] numbers){

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Uppgift7 {
 	
 	public static void main(String[] args){
-		Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in, "Cp850");
 		System.out.print("Skriv en rad: ");
 		String text = in.nextLine();
 		System.out.println("raden innehöll: " + characterCounter(text) + "varav " +

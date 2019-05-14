@@ -13,6 +13,7 @@ public class Uppgift6 {
 		int lineBreak = 0;
 		int counterBreak = start+3;
 		boolean firstNumber = true;
+		System.out.println("Var tredje siffra tio per rad");
 		for(int i = start ; i <= end; i++) {
 			if(firstNumber){
 				firstNumber = !firstNumber;
@@ -32,6 +33,7 @@ public class Uppgift6 {
 			
 		}
 		System.out.println();
+		System.out.println("inom start och sluttal tio per rad");
 		int i = start;
 		lineBreak = 0;
 		do {
