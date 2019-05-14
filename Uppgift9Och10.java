@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Uppgift9 {
+public class Uppgift9Och10 {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {

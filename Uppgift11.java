@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
-public class Uppgift10 {
+public class Uppgift11 {
 
     public static void main(String[] args) {
         Uppgift10 uppgift = new Uppgift10();
