@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 public class Uppgift3 {
-	
+
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.println("ange Kvadraten area");
@@ -20,9 +20,10 @@ public class Uppgift3 {
 		
 	}
 	
+	
 	public static void biggestArea(Figure ... figures){
 		Figure max = figures[0];
-		List<Figure> equalFigure = new ArrayList<>();
+		
 		int i = 0;
 		for (Figure n : figures) {
 			if(n.getArea()>max.getArea()){

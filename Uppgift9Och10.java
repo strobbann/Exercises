@@ -7,7 +7,7 @@ public class Uppgift9Och10 {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Uppgift9 uppgift = new Uppgift9();
+        Uppgift9Och10 uppgift = new Uppgift9Och10();
         List<String> strings = uppgift.writeStrings();
         List<String> filteredStrings = uppgift.findCharacterInString(strings);
 

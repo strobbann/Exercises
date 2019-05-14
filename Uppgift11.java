@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Uppgift11 {
 
     public static void main(String[] args) {
-        Uppgift10 uppgift = new Uppgift10();
+        Uppgift11 uppgift = new Uppgift11();
         Scanner in = new Scanner(System.in);
         List<Person> persons = new ArrayList<>();
         String name = "";
