@@ -61,7 +61,7 @@ public class Uppgift8 {
 		int length = numbers.length;
 		int zeroes = 0;
 		int freeIndex = -1;
-		for(int i = numbers.length-1; 0 < i ;i-- ){
+		for(int i = numbers.length-1; 0 <= i ;i-- ){
 			if(numbers[i] != 0 & freeIndex == -1) {
 				freeIndex = i;
 			}
