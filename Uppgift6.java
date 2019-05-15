@@ -10,40 +10,32 @@ public class Uppgift6 {
 		System.out.print("Ange slut : ");
 		int end = in.nextInt();
 		System.out.println();
-		int lineBreak = 0;
-		int counterBreak = start+3;
+		int lineBreak = 1;
+		int thirdCounter = start+3;
 		boolean firstNumber = true;
 		System.out.println("Var tredje siffra tio per rad");
-		for(int i = start ; i <= end; i++) {
-			if(firstNumber){
-				firstNumber = !firstNumber;
-				lineBreak++;
-				System.out.print(i + " ");
+		
+		for(int i = start; i <= end; i+=3) {
+			System.out.print(i + " ");
+			if(lineBreak%10 == 0) {
+				System.out.println();
 			}
-			if(counterBreak == i ){
-				System.out.print(i + " ");
-				counterBreak += 3;
-				
-				if(lineBreak == 9){
-					System.out.println();
-					lineBreak = 0;
-				}
-				lineBreak++;
-			}	
+			lineBreak++;
+			
 			
 		}
 		System.out.println();
 		System.out.println("inom start och sluttal tio per rad");
 		int i = start;
-		lineBreak = 0;
-		do {
-			if(lineBreak >= 10){
+		lineBreak = 1;
+		while(i <= end){
+			System.out.print(i + " ");
+			if(lineBreak%10 == 0) {
 				System.out.println();
-				lineBreak = 0;
 			}
+			i++;
 			lineBreak++;
-			System.out.print(i++ + " ");	
-		}while(i <= end);
+		}
 		
 	}
 
