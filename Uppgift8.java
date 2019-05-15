@@ -6,9 +6,20 @@ public class Uppgift8 {
 		
 		Uppgift8 uppgift = new Uppgift8();
 		int[] numbers = new int[20];
-		for (int i = 0; i < numbers.length ; i ++) {
-			numbers[i] = (int) (Math.random() * 300);
-		}
+		System.out.print("Ange 20 tal");
+		int index = 0;
+		
+		do {
+			System.out.println(in.hasNextInt());
+			int number = in.nextInt();
+			System.out.println(number);
+			numbers[index] = number;
+			index++;
+			
+		}while(in.hasNextInt());
+		//for (int i = 0; i < numbers.length ; i ++) {
+		//	numbers[i] = (int) (Math.random() * 300);
+		//}
 		System.out.print("Arrayen : ");
 		for(int i : numbers) {
 			System.out.print(i + " ");
