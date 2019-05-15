@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Uppgift4 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -25,7 +26,7 @@ public class Uppgift4 {
 	}
 	
 	public static void addtion(int firstNumber, int secondNumber, Scanner in){
-		System.out.print("vad blir " + firstNumber + " + " + secondNumber + "?");
+		System.out.print("vad blir " + firstNumber + " + " + secondNumber + "? ");
 		int answer = in.nextInt();
 		int rightAnswer = firstNumber + secondNumber;
 		if((rightAnswer) == answer ){
@@ -37,7 +38,7 @@ public class Uppgift4 {
 	}
 	
 	public static void difference(int firstNumber, int secondNumber, Scanner in){
-		System.out.print("vad blir " + firstNumber + " - " + secondNumber + "?");
+		System.out.print("vad blir " + firstNumber + " - " + secondNumber + "? ");
 		int answer = in.nextInt();
 		int rightAnswer = firstNumber - secondNumber;
 		if((rightAnswer) == answer ){
@@ -49,7 +50,7 @@ public class Uppgift4 {
 	}
 	
 	public static void multiply(int firstNumber, int secondNumber,Scanner in) {
-		System.out.print("vad blir " + firstNumber + " * " + secondNumber + "?");
+		System.out.print("vad blir " + firstNumber + " * " + secondNumber + "? ");
 		int answer = in.nextInt();
 		int rightAnswer = firstNumber * secondNumber;
 		if((rightAnswer) == answer ){
@@ -61,7 +62,7 @@ public class Uppgift4 {
 	}
 	
 	public static void divide(int firstNumber, int secondNumber, Scanner in){
-		System.out.print("vad blir " + firstNumber + " / " + secondNumber + "?");
+		System.out.print("vad blir " + firstNumber + " / " + secondNumber + "? ");
 		
 		int answer = in.nextInt();
 		int rightAnswer = firstNumber / secondNumber;
@@ -102,7 +103,8 @@ public class Uppgift4 {
 	}
 	
 	public static int randomNumber(){
-		return (int) (Math.random() * 100);
+		Random random = new Random();
+		return random.nextInt(100) + 1;
 	}
 	
 	public static char randomSymbol(char ... symbols) {
