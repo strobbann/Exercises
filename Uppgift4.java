@@ -6,8 +6,11 @@ public class Uppgift4 {
 		do{
 			boolean isValidInput = false;
 			int firstNumber = randomNumber();
-			int secondNumber = 0;
+			int secondNumber = randomNumber();
 			char symbol = randomSymbol(new char[]{'+', '-', '/', '*'});
+			if(secondNumber == 0 && symbol == '/'){
+				continue;
+			}
 			whatToCalculate(firstNumber,secondNumber,in,symbol);
 			while(!isValidInput){
 				System.out.print("vill du fortsätta: ");
@@ -59,18 +62,17 @@ public class Uppgift4 {
 	
 	public static void divide(int firstNumber, int secondNumber, Scanner in){
 		System.out.print("vad blir " + firstNumber + " / " + secondNumber + "?");
-		if(secondNumber != 0) {	
-			int answer = in.nextInt();
-			int rightAnswer = firstNumber / secondNumber;
 		
-			if((rightAnswer) == answer ){
-				System.out.println("Rätt Svar");
-			} else {
-				System.out.println("Fel svar det rätta svaret är " + rightAnswer);
-			}
+		int answer = in.nextInt();
+		int rightAnswer = firstNumber / secondNumber;
+	
+		if((rightAnswer) == answer ){
+			System.out.println("Rätt Svar");
 		} else {
-			System.out.println("\nNot dividable by zero");
+			System.out.println("Fel svar det rätta svaret är " + rightAnswer);
 		}
+		
+		in.nextLine();
 	}
 	
 	public static void whatToCalculate(int firstNumber, int secondNumber, Scanner in,char symbol){
