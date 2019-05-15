@@ -62,10 +62,10 @@ public class Uppgift8 {
 		int zeroes = 0;
 		int freeIndex = -1;
 		for(int i = numbers.length-1; 0 <= i ;i-- ){
-			if(numbers[i] != 0 & freeIndex == -1) {
+			if(numbers[i] != 0 && freeIndex == -1) {
 				freeIndex = i;
 			}
-			else if(numbers[i] == 0 & freeIndex != -1) {
+			else if(numbers[i] == 0 && freeIndex != -1) {
 				int freeNumber = numbers[freeIndex];
 				int numberZero = numbers[i];
 				numbers[freeIndex] = numberZero;
